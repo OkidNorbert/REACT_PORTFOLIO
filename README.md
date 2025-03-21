@@ -68,3 +68,29 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+# Deploying React App to GitHub Pages
+
+1. Install GitHub Pages package as a dev-dependency:
+
+6. Configure GitHub Pages:
+   - Go to your GitHub repository
+   - Click on "Settings"
+   - Scroll to "GitHub Pages" section
+   - Select the "gh-pages" branch as the source
+   - Save the changes
+
+Your app should now be live at: `https://yourusername.github.io/your-repo-name`
+
+## Important Notes:
+- Replace `yourusername` with your GitHub username
+- Replace `your-repo-name` with your repository name
+- Make sure your repository is public
+- The first deployment might take a few minutes to become live
+- If you make changes, run `npm run deploy` again to update the live site
+
+## Troubleshooting:
+- If you get a 404 error, make sure the "homepage" URL in package.json matches exactly with your GitHub Pages URL
+- Ensure all your React Router paths are relative to the homepage URL
+- Clear your browser cache if you don't see the updates
