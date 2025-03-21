@@ -139,6 +139,44 @@
 
 @media (prefers-color-scheme: dark) {
   .navbar {
-    background: rgba(26, 32, 44, 0.95);
+    background: rgba(161, 186, 233, 0.95);
   }
+}
+
+.mode-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mode-button.light {
+  background: #ffd700;
+  box-shadow: 0 0 20px #ffd700;
+}
+
+.mode-button.dark {
+  background: #2c3e50;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.mode-button:hover {
+  transform: scale(1.1);
+}
+
+/* Sun rays effect for light mode */
+.mode-button.light::after {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  background: radial-gradient(circle, #ffd700 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: -1;
 } 

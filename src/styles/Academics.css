@@ -27,7 +27,7 @@
     display: flex;
     gap: var(--spacing-lg);
     padding: var(--spacing-md);
-    background: var(--card-bg);
+    background: rgba(59, 130, 246, 0.1);
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     margin-bottom: var(--spacing-lg);
@@ -213,6 +213,16 @@
 
     .info-item .label {
         color: var(--text-muted-dark);
+    }
+
+    .info-item:nth-child(1) .value,
+    .info-item:nth-child(2) .value {
+        color: #a855f7;
+    }
+
+    .info-item:nth-child(1) .label,
+    .info-item:nth-child(2) .label {
+        color: #c084fc;
     }
 
     .results-table {
