@@ -1,0 +1,65 @@
+:root {
+  /* Color System */
+  --primary-rgb: 94, 92, 230;
+  --primary-color: rgb(var(--primary-rgb));
+  --primary-dark: #4340b3;
+  --gradient-start: #6e6bd8;
+  --gradient-mid: #5b57d1;
+  --gradient-end: #4340b3;
+  
+  /* Light Mode */
+  --bg-color: #f8f9fc;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --text-color: #2d3748;
+  --text-muted: #718096;
+  --border-color: #e2e8f0;
+  --hover-bg: rgba(247, 250, 252, 0.9);
+  --input-bg: white;
+  --placeholder-color: #a0aec0;
+  
+  /* Dark Mode Colors */
+  --bg-color-dark: #1a202c;
+  --card-bg-dark: rgba(26, 32, 44, 0.95);
+  --text-color-dark: #f7fafc;
+  --text-muted-dark: #a0aec0;
+  --border-color-dark: #2d3748;
+  --hover-bg-dark: rgba(45, 55, 72, 0.9);
+  --input-bg-dark: rgba(45, 55, 72, 0.5);
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: var(--bg-color-dark);
+    --card-bg: var(--card-bg-dark);
+    --text-color: var(--text-color-dark);
+    --text-muted: var(--text-muted-dark);
+    --border-color: var(--border-color-dark);
+    --hover-bg: var(--hover-bg-dark);
+    --input-bg: var(--input-bg-dark);
+  }
+} 

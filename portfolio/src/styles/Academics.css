@@ -1,0 +1,238 @@
+.academics-section {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-color);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.semester-info {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    background: var(--hover-bg);
+    min-width: 120px;
+}
+
+.info-item.highlight {
+    background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+    color: white;
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.info-item .label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.info-item.highlight .label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.info-item .value {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.results-table {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+}
+
+.results-table table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--text-color);
+}
+
+.results-table th {
+    background: var(--primary-color);
+    color: white;
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 600;
+}
+
+.results-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.results-table tbody tr:hover {
+    background: var(--hover-bg);
+}
+
+.results-table .mark,
+.results-table .cu,
+.results-table .gp {
+    text-align: center;
+}
+
+.results-table tfoot td {
+    padding: var(--spacing-md);
+    font-weight: 600;
+}
+
+.results-table .total {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.course-name {
+    font-weight: 500;
+    max-width: 300px;
+}
+
+.mark {
+    position: relative;
+    padding-right: var(--spacing-xl) !important;
+}
+
+.mark-value {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+}
+
+.mark-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: 0.15;
+    transition: width var(--transition-normal);
+}
+
+.excellent {
+    color: #10B981;
+    background-color: rgba(16, 185, 129, 0.1);
+}
+.excellent .mark-bar { background-color: #10B981; }
+
+.good {
+    color: #3B82F6;
+    background-color: rgba(59, 130, 246, 0.1);
+}
+.good .mark-bar { background-color: #3B82F6; }
+
+.average {
+    color: #F59E0B;
+    background-color: rgba(245, 158, 11, 0.1);
+}
+.average .mark-bar { background-color: #F59E0B; }
+
+.needs-improvement {
+    color: #EF4444;
+    background-color: rgba(239, 68, 68, 0.1);
+}
+.needs-improvement .mark-bar { background-color: #EF4444; }
+
+.cu, .gp {
+    text-align: center;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .academics-section {
+        padding: var(--spacing-md);
+    }
+
+    .semester-info {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .info-item {
+        width: 100%;
+    }
+
+    .results-table {
+        padding: var(--spacing-sm);
+    }
+
+    .results-table td,
+    .results-table th {
+        padding: var(--spacing-sm);
+        font-size: 0.9rem;
+    }
+
+    .course-name {
+        max-width: 200px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .section-header h2 {
+        color: white;
+    }
+
+    .info-item {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .info-item .label {
+        color: var(--text-muted-dark);
+    }
+
+    .results-table {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .results-table tfoot {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    .results-table td {
+        border-color: rgba(255, 255, 255, 0.1);
+        color: var(--text-color-dark);
+    }
+
+    .results-table tbody tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .results-table .total {
+        color: var(--primary-color);
+    }
+} 
