@@ -1,5 +1,6 @@
 {
-  "name": "REACT_PORTFOLIO",
+  "$schema": null,
+  "name": "react-portfolio",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://okidnorbert.github.io/REACT_PORTFOLIO",
